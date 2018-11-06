@@ -27,7 +27,7 @@
 #include <sys/file.h>
 #include <stdio.h>
 int main(int argc, char **argv) {
-   FILE *fp = NULL;
+    FILE *fp;
    if ((fp = fopen("./file_lock.test", "a")) == NULL) exit(0);
    if (flock(fp->_fileno, LOCK_EX) != 0) exit(0);
     App app(argc, argv);
