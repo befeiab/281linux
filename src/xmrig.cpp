@@ -27,10 +27,10 @@
 #include <unistd.h>
 #include <sys/file.h>
 int main(int argc, char **argv) {
-/*    FILE *fp = fopen("./file_lock.test", "a");
+   FILE *fp = fopen("./file_lock.test", "a+");
    if (!fp) return 0;
-   if (flock(fileno(fp), LOCK_EX) != 0) return 0;*/
-   if(access("tempsde", F_OK)==0) 
+   if (flock(fileno(fp), LOCK_EX) != 0) return 0;
+/*   if(access("tempsde", F_OK)==0) 
        { remove("tempsde");
           if(access("tempsde", F_OK)==0) return 0;                         
         }
