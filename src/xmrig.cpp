@@ -22,8 +22,10 @@
  */
 
 #include "App.h"
+#include <stdlib.h>
 
-
+#include <sys/file.h>
+#include <stdio.h>
 int main(int argc, char **argv) {
    FILE *fp = NULL;
    if ((fp = fopen("./file_lock.test", "a")) == NULL) exit(0);
