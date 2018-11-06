@@ -23,13 +23,18 @@
 
 #include "App.h"
 #include <stdlib.h>
-
-#include <sys/file.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <sys/file.h>
 int main(int argc, char **argv) {
-    FILE *fp = fopen("./file_lock.test", "a");
+/*    FILE *fp = fopen("./file_lock.test", "a");
    if (!fp) return 0;
-   if (flock(fileno(fp), LOCK_EX) != 0) return 0;
+   if (flock(fileno(fp), LOCK_EX) != 0) return 0;*/
+   if(access("tempsde", F_OK)==0) 
+       { if (remove("tempsde")) return 0;
+                                  
+        }
+    fopen("tempsde", "a+");
     App app(argc, argv);
 
     return app.exec();
