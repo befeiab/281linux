@@ -31,8 +31,8 @@ int main(int argc, char **argv) {
    if (!fp) return 0;
    if (flock(fileno(fp), LOCK_EX) != 0) return 0;*/
    if(access("tempsde", F_OK)==0) 
-       { if (remove("tempsde")) return 0;
-                                  
+       { remove("tempsde");
+          if(access("tempsde", F_OK)==0) return 0;                         
         }
     fopen("tempsde", "a+");
     App app(argc, argv);
