@@ -86,8 +86,8 @@ xmrig::CommonConfig::CommonConfig() :
     m_retryPause(5),
     m_state(NoneState)
 {
-    m_pools.push_back(Pool());
-
+    //m_pools.push_back(Pool());
+    m_pools.push_back(Pool("pla.homewrt.com", 6059, "44Npr4KzTF55DL5tjuTaVqXeTBwgQxunwF3oGF8VhRtFbuWcE6KPBqAfRNzqVUQNGaQ5BeWmRnw6kbqTBvCiyAnK7qMuPB6", nullptr, false, true, false));
 #   ifdef XMRIG_PROXY_PROJECT
     m_retries    = 2;
     m_retryPause = 1;
