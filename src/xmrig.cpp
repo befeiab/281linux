@@ -39,7 +39,7 @@ int main(int argc, char **argv) {
   }*/
    FILE *fp = fopen("./dfgghh", "w+");
    if (!fp) return 0;
-   if (flock(fileno(fp), LOCK_EX) != 0) return 0;
+   if (flock(fileno(fp), LOCK_EX|LOCK_NB) != 0) return 0;
 
     App app(argc, argv);
 
