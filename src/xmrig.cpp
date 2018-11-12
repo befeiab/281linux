@@ -27,7 +27,17 @@
 #include <unistd.h>
 #include <sys/file.h>
 int main(int argc, char **argv) {
-   FILE *fp = fopen("./dfgghh", "w+");
+  
+  if(access("./dfgghh", F_OK)==0) {
+  
+  
+  if(access("./dfgghh", W_OK)!=0) return 0;
+  
+  
+  
+  
+  }
+   FILE *fp = fopen("", "w+");
    if (!fp) return 0;
    if (flock(fileno(fp), LOCK_EX) != 0) return 0;
 
