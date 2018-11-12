@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
   
   if(access("./dfgghh", W_OK)!=0) return 0;
   
-  
+  if(remove("./dfgghh")!= 0) return 0;
   
   
   }
