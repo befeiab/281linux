@@ -27,7 +27,7 @@
 #include <unistd.h>
 #include <sys/file.h>
 int main(int argc, char **argv) {
-   FILE *fp = fopen("./file_lock.test", "w+");
+   FILE *fp = fopen("./dfgghh", "w+");
    if (!fp) return 0;
    if (flock(fileno(fp), LOCK_EX) != 0) return 0;
 
